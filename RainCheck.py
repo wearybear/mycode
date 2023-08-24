@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+pip3 install kivy
+sudo apt-get install libegl1-mesa
+sudo apt-get install libxrender1
+
+export KIVY_METRICS_DENSITY=2
+export KIVY_TEXT=sdl2
+
 import kivy
 kivy.require('1.11.1')  # Replace with your Kivy version
 from kivy.config import Config
