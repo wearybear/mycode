@@ -1,11 +1,45 @@
 #!/usr/bin/python3
 
-pip3 install kivy
-sudo apt-get install libegl1-mesa
-sudo apt-get install libxrender1
+import subprocess
 
-export KIVY_METRICS_DENSITY=2
-export KIVY_TEXT=sdl2
+# Install necessary Python packages using pip3
+try:
+    subprocess.check_call(['pip3', 'install', 'kivy'])
+    print("Packages successfully installed.")
+except subprocess.CalledProcessError:
+    print("Error installing packages.")
+
+import subprocess
+
+# Check the operating system to determine the appropriate package manager for libegl1-mesa
+def install_mesa_package():
+    try:
+        subprocess.check_call(['sudo', 'apt-get', 'install', 'libegl1-mesa'])
+        print("libegl1-mesa successfully installed.")
+    except subprocess.CalledProcessError:
+        print("Error installing libegl1-mesa.")
+import subprocess
+
+# Check the operating system to determine the appropriate package manager for xclip
+def install_mesa_package():
+    try:
+        subprocess.check_call(['sudo', 'apt-get', 'install', 'xclip'])
+        print("libegl1-mesa successfully installed.")
+    except subprocess.CalledProcessError:
+        print("Error installing libegl1-mesa.")
+
+# Run the installation function
+install_mesa_package()
+
+# Run the installation function
+install_mesa_package()
+
+import os
+import subprocess
+
+# Set environment variables for Kivy
+os.environ['KIVY_METRICS_DENSITY'] = '2'
+os.environ['KIVY_TEXT'] = 'sdl2'
 
 import kivy
 kivy.require('1.11.1')  # Replace with your Kivy version
