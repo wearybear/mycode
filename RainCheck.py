@@ -68,7 +68,7 @@ class WeatherApp(App):
     
     def fetch_weather(self, instance):
         city = self.city_input.text
-        api_key = 'JyJD8ZknpuBTKp6eH90mz4NFO7doWqCl'
+        api_key = 'API key here'
         base_url = f'http://dataservice.accuweather.com/currentconditions/v1/{city}?apikey={api_key}'
         
         response = requests.get(base_url)
